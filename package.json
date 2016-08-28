@@ -1,0 +1,26 @@
+{
+  "name": "cjopus",
+  "version": "0.0.1",
+  "description": "Emscripten bindings for libopus. Encode / Decode your audio to opus with pure JS.",
+  "main": "./lib/Opus.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izy521/CJOpus.git"
+  },
+  "keywords": [
+    "Opus",
+    "libopus",
+    "Emscripten",
+    "Audio",
+    "LLVM"
+  ],
+  "author": "izy521",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/izy521/CJOpus/issues"
+  },
+  "homepage": "https://github.com/izy521/CJOpus#readme"
+}
