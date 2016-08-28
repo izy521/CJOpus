@@ -1,7 +1,32 @@
 # CJOpus
 Emscripten (C++/JavaScript) bindings for libopus
 
-This module is very experimental. It was initially created as a JavaScript alternative to [`node-opus`](https://github.com/Rantanen/node-opus) for my DiscordApp client library, [`discord.io`](https://github.com/izy521/discord.io). Because of that, a lot of settings are static. However, even though my knowledge of C/C++ is VERY limited, I do plan on making this completely customizable, so if you're a bit more savvy than I am, please submit some PRs!
+A module to encode PCM data to and decode PCM data from Opus.
+
+## Using
+
+### OpusEncoder
+
+```js
+//Tries to mimic `node-opus` in syntax.
+var encoder = new OpusEncoder( 48000, 2 );
+```
+
+### OpusEncoder#encode
+
+```js
+var PCM = getPCMDataSomehow();
+var encoded = encoder.encode( PCM );
+```
+
+### OpusEncoder#decode
+
+```js
+var OPUS = getOPUSDataSomehow();
+var decoded = encoder.decode( OPUS );
+```
+
+## Building
 
 Currently in the process of getting build scripts together (also not very knowledgable about that), but the steps for generating this is as follows:
 
@@ -9,7 +34,7 @@ Currently in the process of getting build scripts together (also not very knowle
 * 2. Configure it with Emscripten's `emconfigure` (`emconfigure ./configure`)
   * 2a. If it fails and complains about intrinsics, remove `intrinsics` related logic from the `configure` file.
 * 3. Make with Emscripten's `emmake` (`emmake ./make`)
-* 4. Link and compile with `em++`.
-  * 4a. The command I used: `em++ --bind CJOpus.cpp opus-1.1.3/.libs/libopus.so -o CJOpus.js`
+* 4. Link and compile with `emcc`.
+  * 4a. The command I used: `emcc --memory-init-file 0 -O3 -g0 --llvm-opts 3 --closure 1 --llvm-lto 3  CJOpus.c opus-1.1.3/.libs/libopus.so -o CJOpus.js`
 
 Apologies if this is a bit unorthodox.
