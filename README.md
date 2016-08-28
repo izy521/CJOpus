@@ -12,14 +12,14 @@ A module to encode PCM data to and decode PCM data from Opus.
 var encoder = new OpusEncoder( 48000, 2 );
 ```
 
-### OpusEncoder#encode
+### OpusEncoder#encode(Buffer/TypedArray/Array)
 
 ```js
 var PCM = getPCMDataSomehow();
 var encoded = encoder.encode( PCM );
 ```
 
-### OpusEncoder#decode
+### OpusEncoder#decode(Buffer/TypedArray/Array)
 
 ```js
 var OPUS = getOPUSDataSomehow();
