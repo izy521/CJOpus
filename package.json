@@ -1,6 +1,6 @@
 {
   "name": "cjopus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Emscripten bindings for libopus. Encode / Decode your audio to opus with pure JS.",
   "main": "./lib/Opus.js",
   "scripts": {
