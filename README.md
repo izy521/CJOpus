@@ -38,7 +38,7 @@ These two methods work just like the safe versions, however they don't do any er
 encoder.destroy();
 ```
 
-Since this is an Emscripten module (that also has to malloc), the memory also needs to be freed manually when finished. It's a small program, perhaps under 30KB of memory, but that can add up.
+Since this is an Emscripten module (that also has to malloc), the memory also needs to be freed manually when finished. It's a small program, perhaps under 30KB of dynamically allocated memory, but that can add up.
 
 ## Building
 
