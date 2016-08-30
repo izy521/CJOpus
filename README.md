@@ -5,6 +5,8 @@ A module to encode PCM data to and decode PCM data from Opus.
 
 ## Using
 
+The `lib` folder includes a pre-compiled version. Requiring the `Opus.js` entrypoint file should be enough.
+
 ### OpusEncoder
 
 ```js
