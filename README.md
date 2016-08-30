@@ -32,6 +32,14 @@ var decoded = encoder.decode( OPUS );
 
 These two methods work just like the safe versions, however they don't do any error checking and they use `.subarray()` instead of `.slice()`. Because of this, it's a bit faster. It's relatively safe to use, just know that if an encoding error happens, it will return an empty `Uint8Array` (encode) or `Int16Array` (decode).
 
+### OpusEncoder#destroy()
+
+```js
+encoder.destroy();
+```
+
+Since this is an Emscripten module (that also has to malloc), the memory also needs to be freed manually when finished. It's a small program, perhaps under 30KB of memory, but that can add up.
+
 ## Building
 
 Currently in the process of getting build scripts together (also not very knowledgable about that), but the steps for generating this is as follows:
