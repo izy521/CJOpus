@@ -26,6 +26,10 @@ var OPUS = getOPUSDataSomehow();
 var decoded = encoder.decode( OPUS );
 ```
 
+### OpusEncoder#encodeUnsafe / OpusEncoder#decodeUnsafe
+
+These two methods work just like the safe versions, however they don't do any error checking and they use `.subarray()` instead of `.slice()`. Because of this, it's a bit faster. It's relatively safe to use, just know that if an encoding error happens, it will return an empty `Uint8Array` (encode) or `Int16Array` (decode).
+
 ## Building
 
 Currently in the process of getting build scripts together (also not very knowledgable about that), but the steps for generating this is as follows:
