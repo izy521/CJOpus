@@ -94,6 +94,7 @@ int decode(Encoder* encoder, int length) {
     return encoded_frames;
 }
 
+EMSCRIPTEN_KEEPALIVE
 void destroy_encoder(Encoder* encoder) {
     opus_encoder_destroy(encoder->encoder);
     opus_decoder_destroy(encoder->decoder);
