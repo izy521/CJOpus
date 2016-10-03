@@ -14,7 +14,7 @@ all: make_opus transpile
 
 make_opus:
 	cd opus; \
-	./autogen.sh \
+	./autogen.sh; \
 	$(EMCONF) ./configure $(EMCONFFLAGS); \
 	$(EMMAKE) make;
 	
