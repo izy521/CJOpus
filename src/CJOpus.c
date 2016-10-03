@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <emscripten.h>
-#include "opus-1.1.3/include/opus.h"
+#include "../opus/include/opus.h"
 
 #define MAX_FRAME_SIZE   5760
 #define MAX_INPUT_BYTES  3840
