@@ -1,5 +1,6 @@
 # Let's go, Makefile!
 # This is to compile CJOpus from a C program to a JavaScript script.
+# http://mrbook.org/blog/tutorials/make/ - Thank you friend!
 CC = emcc
 EMCONF = emconfigure
 EMMAKE = emmake
